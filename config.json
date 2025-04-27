@@ -1,0 +1,43 @@
+{
+  "user": {
+    "add_to_sudo": true
+  },
+  "ssh": {
+    "port": 42069,
+    "disable_password_auth": true,
+    "disable_root_login": true,
+    "protocol": 2,
+    "max_auth_tries": 5,
+    "login_grace_time": 30,
+    "allow_x11_forwarding": false,
+    "client_alive_interval": 300,
+    "client_alive_count_max": 2
+  },
+  "firewall": {
+    "policy_incoming": "deny",
+    "policy_outgoing": "allow",
+    "allow_ssh": true,
+    "allow_http": false,
+    "allow_https": false,
+    "enable_firewall": true
+  },
+  "fail2ban": {
+    "ban_time": 600,
+    "find_time": 600,
+    "max_retry": 5
+  },
+  "updates": {
+    "install_security": true,
+    "install_updates": false,
+    "auto_reboot": false,
+    "reboot_time": "02:00"
+  },
+  "motd": {
+    "disable_default_motd": true,
+    "disable_last_login": true,
+    "ascii_art": "    WELCOME ON THE SHIP CAPTAIN 🫡"
+  },
+  "prerequisites": {
+    "additional_packages": ["curl", "vim"]
+  }
+} 
